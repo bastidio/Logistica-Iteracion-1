@@ -1,0 +1,23 @@
+[
+  {
+    "id": "PQ-JSON-1",
+    "peso": 10.0,
+    "destino": "Palermo",
+    "urgente": false,
+    "contenido": "Ropa"
+  },
+  {
+    "id": "PQ-JSON-PESADO",
+    "peso": 60.0,
+    "destino": "Belgrano",
+    "urgente": false,
+    "contenido": "Heladera"
+  },
+  {
+    "id": "PQ-JSON-URGENTE",
+    "peso": 2.0,
+    "destino": "Recoleta",
+    "urgente": true,
+    "contenido": "Documentos"
+  }
+]
