@@ -47,8 +47,10 @@ public class Main {
                     System.out.print("¿Es urgente? (true/false): ");
                     boolean urgente = teclado.nextBoolean();
                     teclado.nextLine();
+                    Syste.out.print("Contenido: ");
+                    String cont = teclado.next();
 
-                    Paquete<String> nuevo = new Paquete<>(id, peso, destino, urgente, "Carga manual");
+                    Paquete<String> nuevo = new Paquete<>(id, peso, destino, urgente, cont);
                     centro.recibirPaquete(nuevo);
                     break;
 
