@@ -37,19 +37,30 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print("ID del paquete: ");
-                    String id = teclado.nextLine();
-                    System.out.print("Peso: ");
-                    double peso = teclado.nextDouble();
-                    teclado.nextLine(); 
-                    System.out.print("Destino: ");
-                    String destino = teclado.nextLine();
-                    System.out.print("¿Es urgente? (true/false): ");
-                    boolean urgente = teclado.nextBoolean();
-                    teclado.nextLine();
+                	try {
+                        System.out.print("ID del paquete: ");
+                        String id = teclado.nextLine();
+                        System.out.print("Peso: ");
+                        double peso = teclado.nextDouble();
+                        teclado.nextLine(); 
+                        System.out.print("Destino: ");
+                        String destino = teclado.nextLine();
+                        System.out.print("¿Es urgente? (true/false): ");
+                        boolean urgente = teclado.nextBoolean();
+                        teclado.nextLine();
 
-                    Paquete<String> nuevo = new Paquete<>(id, peso, destino, urgente, "Carga manual");
-                    centro.recibirPaquete(nuevo);
+                        
+                        Paquete<String> nuevo = new Paquete<>(id, peso, destino, urgente, "Carga manual");
+                        centro.recibirPaquete(nuevo);
+                        
+                        
+                    } catch (IllegalArgumentException e) {
+                        
+                        System.out.println("ERROR: No se pudo crear el paquete. " + e.getMessage());
+                    } catch (Exception e) {
+                        System.out.println("Ocurrió un error inesperado.");
+                        teclado.nextLine();
+                    }
                     break;
 
                 case 3:
